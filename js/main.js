@@ -23,24 +23,7 @@
 		}
 	};
 
-	var mobileMenuOutsideClick = function() {
 
-		$(document).click(function (e) {
-	    var container = $("#colorlib-offcanvas, .js-colorlib-nav-toggle");
-	    if (!container.is(e.target) && container.has(e.target).length === 0) {
-
-	    	if ( $('body').hasClass('offcanvas') ) {
-
-    			$('body').removeClass('offcanvas');
-    			$('.js-colorlib-nav-toggle').removeClass('active');
-				
-	    	}
-	    
-	    	
-	    }
-		});
-
-	};
 	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		anchor.addEventListener('click', function (e) {
 			e.preventDefault();
@@ -53,8 +36,6 @@
 
 	var offcanvasMenu = function() {
 
-		$('#page').prepend('<div id="colorlib-offcanvas" />');
-		$('#page').prepend('<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle colorlib-nav-white"><i></i></a>');
 		var clone1 = $('.menu-1 > ul').clone();
 		$('#colorlib-offcanvas').append(clone1);
 		var clone2 = $('.menu-2 > ul').clone();
@@ -243,13 +224,13 @@
 		owl.owlCarousel({
 			animateOut: 'fadeOut',
 		   animateIn: 'fadeIn',
-			autoplay: true,
+			autoplay: false,
 			items: 1,
 		   loop: true,
 		   margin: 0,
 		   responsiveClass: true,
-		   nav: true,
-		   dots: true,
+		   nav: false,
+		   dots: false,
 		   smartSpeed: 0,
 		   navText: [
 		      "<i class='icon-arrow-left3 owl-direction'></i>",
@@ -265,7 +246,6 @@
 
 	
 	$(function(){
-		mobileMenuOutsideClick();
 		offcanvasMenu();
 		burgerMenu();
 		contentWayPoint();

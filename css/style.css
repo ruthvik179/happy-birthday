@@ -915,6 +915,14 @@ article {
     width: 100%;
     display: block; }
 
+    #riddle {
+      font-size: 14px;
+    width: 100%;
+    border: none;
+    border-bottom: transparent;
+    color: #4d4d4d !important; 
+    }
+
 .no-gutters {
   margin: 0 !important; }
 
