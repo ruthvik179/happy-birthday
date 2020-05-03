@@ -53,7 +53,7 @@ window.onload = function() {
         }
         
         if(window.location.href.split("/").pop().includes("aashish.html")) {
-            if(answer.toLowerCase().includes("pizza") && answer.toLowerCase().includes("xpress")) {
+            if(answer.toLowerCase().includes("badminton")) {
                 nextPage = "narayana.html"
                 window.location.replace(window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/" + nextPage);
             }
